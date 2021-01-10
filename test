@@ -2,3 +2,16 @@ https://drive.google.com/drive/folders/1Muczz-YykIBQKKsaAW_NPHrK0tChcdgLL?usp=sh
 
 https://forums.iis.net/t/1251178.aspx?recycle+all+application+pools+on+menu+in+IIS
 
+#App Pools Recycling
+Write-Host "App Pool Recycling Started...." -ForegroundColor Green
+& $env:windir\system32\inetsrv\appcmd list apppools /state:Started /xml | & $env:windir\system32\inetsrv\appcmd recycle apppools /in
+Write-Host "App Pool Recycling Completed" -ForegroundColor Green
+
+
+
+# Restart IIS
+iisreset /RESTART
+Write-Host "Restarting IIS is done successfully...." -ForegroundColor Green
+
+
+
