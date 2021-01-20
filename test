@@ -10,6 +10,13 @@ Write-Host "App Pool Recycling Completed" -ForegroundColor Green
 https://drive.google.com/drive/folders/1illOCbK6hSzaCX0kOMYrKMir41pksE9Y?usp=sharing
 
 
+Open the web.config file for SS, which is located in the root directory for the website.
+Inside the <system.web> tag, add the tag <httpRuntime enableVersionHeader="false"/>.
+Save the file.
+
+
+
+
 https://www.dropbox.com/s/nw5ld53fqi8fhvb69/TarasolSiteV4.162021-01-20.zip?dl=1
 
 # Restart IIS
